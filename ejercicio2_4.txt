@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS `ejercicio2_26`.`prod_informatico` (
+  `codigo_info` INT NOT NULL,
+  `descripcion` TEXT NOT NULL,
+  `codigo` INT NOT NULL,
+  `precio` DOUBLE NOT NULL,
+  `num_producto` INT NOT NULL,
+  PRIMARY KEY (`codigo_info`),
+  INDEX `proveedor_idx` (`codigo` ASC) VISIBLE,
+  CONSTRAINT `proveedor`
+    FOREIGN KEY (`codigo`)
+    REFERENCES `ejercicio2_26`.`proveedor` (`codigo_prov`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
